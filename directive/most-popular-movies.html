@@ -1,8 +1,18 @@
 <div>
-    <div class="item item-avatar">
-        <h2>{{movie.title}}</h2>
-        <p>{{movie.overview}}</p>
-        <p>{{movie.release_date}}</p>
-        <image ng-src="{{ 'https://image.tmdb.org/t/p/w640' + movie.poster_path}}" style="width: 100px"></image>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img ng-src="{{'https://image.tmdb.org/t/p/w640' + movie.poster_path}}" alt="..." style="width: 200px">
+                <div class="caption">
+                    <h3>{{movie.title}}</h3>
+                    <p>{{movie.overview | limitTo:100}}...</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                </div>
+            </div>
     </div>
+    <!--<div class="item item-avatar">-->
+        <!--<h2>{{movie.title}}</h2>-->
+        <!--<p>{{movie.overview}}</p>-->
+        <!--<p>{{movie.release_date}}</p>-->
+        <!--<image ng-src="{{ 'https://image.tmdb.org/t/p/w640' + movie.poster_path}}" style="width: 100px"></image>-->
+    <!--</div>-->
 </div>
