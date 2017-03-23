@@ -11,11 +11,7 @@ app.service ('API', function ($http, $q) {
                 }
             }).then(function (data) {
                 console.log(data);
-                console.log(data.data.page);
-                console.log(data.data.total_pages);
-                console.log(data.data.total_results);
-                console.log(data.data.results);
-                var movies = data.data.results;
+                var movies = data.data;
                 d.resolve(movies)
             });
             return d.promise
