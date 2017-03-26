@@ -1,4 +1,4 @@
-app.service ('API', function ($http, $q) {
+app.service ('API', function ($http, $q, apiKeys) {
     return {
         getMostPopularMovies: function () {
             var key = 'aa1625f9990899f7cfc5676de6cf520d';
@@ -7,7 +7,7 @@ app.service ('API', function ($http, $q) {
                 method: 'GET',
                 url: 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22',
                 params: {
-                    api_key: key
+                    api_key: apiKeys.tmdb
                 }
             }).then(function (data) {
                 console.log(data);
