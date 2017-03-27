@@ -7,7 +7,8 @@ app.service ('API', function ($http, $q, apiKeys) {
                 method: 'GET',
                 url: 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22',
                 params: {
-                    api_key: apiKeys.tmdb
+                    api_key: apiKeys.tmdb,
+                    page: 2
                 }
             }).then(function (data) {
                 console.log(data);
