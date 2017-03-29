@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
 
-    <script src="./js/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
-    <script src="http://momentjs.com/downloads/moment.js"></script>
-
-    <script src="services/app.js"></script>
-    <script src="services/apiService.js"></script>
-    <script src="./directive/header.js"></script>
-    <script src="./directive/footer.js"></script>
-    <script src="directive/all-movies-item.js"></script>
-    <script src="./directive/most-popular-movies.js"></script>
-    <script src="controllers/allMoviesController.js"></script>
-    <script src="routes.js"></script>
-    <script src="./constant/keys.js"></script>
-
 </head>
 
 <body>
 
-<div>
+<div style="width: 80%; margin: 0 auto;">
     <div ng-view></div>
 </div>
+
+<script src="./js/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
+<!--<script src="http://momentjs.com/downloads/moment.js"></script>-->
+
+<script src="services/app.js"></script>
+<script src="services/apiService.js"></script>
+<script src="directive/header.js"></script>
+<script src="directive/footer.js"></script>
+<script src="directive/all-movies-item.js"></script>
+<script src="directive/most-popular-movies.js"></script>
+
+<script src="controllers/allMoviesController.js"></script>
+<script src="controllers/homeController.js"></script>
+<script src="routes.js"></script>
+<script src="constant/keys.js"></script>
 
 <!--<nav class="{{active}}" ng-click="$event.preventDefault()">-->
 
