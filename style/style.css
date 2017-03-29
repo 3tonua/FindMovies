@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    background: #e2def2;
 }
 .header {
     /*background-color: #262626;*/
@@ -12,7 +13,7 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
-
+    /*margin: 0 auto*/
 }
 .blur {
     background-image: url("./../images/up.jpg");
@@ -149,7 +150,7 @@ ul.menu > li:hover > ul.submenu {
     background: rgba(0,0,0,0.65);
     display: table;
     padding: 20px;
-    margin: 10px auto 10px auto;
+    margin: 30px auto 10px auto;
     border-radius: 5px;
 }
 .subscribe input[type="text"], .subscribe input[type="email"], textarea {
@@ -176,10 +177,47 @@ ul.menu > li:hover > ul.submenu {
 .subscribe input {
     float: left;
 }
-
-
-
-
+.home-container {
+    /*height: 700px;*/
+    /*border: 1px solid lightgrey;*/
+    margin: 50px auto
+}
+.movies {
+    color: white;
+    background-image: url("./../images/movies.jpg");
+    border: 1px solid lightgrey;
+    height: 600px;
+    width: 450px;
+    background-size: cover;
+    margin: 10px 40px;
+    display: inline-block;
+    border-radius: 5px
+}
+.serials {
+    color: white;
+    background-image: url("./../images/serials.jpg");
+    border: 1px solid lightgrey;
+    height: 600px;
+    width: 450px;
+    background-size: cover;
+    margin: 10px 40px;
+    display: inline-block;
+    border-radius: 10px
+}
+.movies:hover {
+    opacity: .9;
+    color: black
+}
+.serials:hover {
+    opacity: .9;
+    color: black
+}
+.movies h2{
+    opacity: .9;
+}
+.movies h2:hover {
+    opacity: 1;
+}
 
 
 
