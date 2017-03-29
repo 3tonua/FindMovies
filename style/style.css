@@ -136,14 +136,15 @@ ul.menu > li:hover > ul.submenu {
     margin: 10px;
     /*background: #b9b9b9;*/
     position: relative;
-    border: lightgrey solid 1px;
-    transition: all 1s
+    /*border: lightgrey solid 1px;*/
+    transition: all 0.5s
 }
 .container:hover {
     background: #e6e6e6;
     box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     /*border: red solid 1px;*/
-    transition: all 0.5s
+    transition: all 0.2s;
+    transform: scale(1.05);
 }
 
 /*Форма поиска*/
