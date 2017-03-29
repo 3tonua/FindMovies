@@ -26,10 +26,10 @@ body {
     position: absolute;
     transition: all 1s
 }
-.blur:hover {
+/*.blur:hover {
     filter: blur(2px);
     transition: all 1s
-}
+}*/
 .menu {
     position: absolute;
     z-index: 100;
@@ -183,6 +183,7 @@ ul.menu > li:hover > ul.submenu {
     margin: 50px auto
 }
 .movies {
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     color: white;
     background-image: url("./../images/movies.jpg");
     border: 1px solid lightgrey;
@@ -193,9 +194,9 @@ ul.menu > li:hover > ul.submenu {
     display: inline-block;
     border-radius: 5px;
     transition: all 0.5s;
-    filter: blur(1px)
 }
 .serials {
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     color: white;
     background-image: url("./../images/serials.jpg");
     border: 1px solid lightgrey;
@@ -206,7 +207,6 @@ ul.menu > li:hover > ul.submenu {
     display: inline-block;
     border-radius: 10px;
     transition: all 0.5s;
-    filter: blur(1px)
 }
 /*.movies:hover {
     transform: scale(1.05);
@@ -258,14 +258,12 @@ ul.menu > li:hover > ul.submenu {
 }
 
 .movies:hover{
-    filter: none;
     -webkit-animation: swing 0.6s ease;
     animation: swing 0.6s ease;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
 }
 .serials:hover{
-    filter: none;
     -webkit-animation: swing 0.6s ease;
     animation: swing 0.6s ease;
     -webkit-animation-iteration-count: 1;
