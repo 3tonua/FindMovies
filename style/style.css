@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: #e2def2;
+    background: #f8f8f8;
 }
 .header {
     /*background-color: #262626;*/
@@ -140,11 +140,11 @@ ul.menu > li:hover > ul.submenu {
     transition: all 0.5s
 }
 .container:hover {
-    background: #e6e6e6;
+    background: #ffffff;
     box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     /*border: red solid 1px;*/
-    transition: all 0.2s;
-    transform: scale(1.05);
+    transition: all 0.1s;
+    transform: scale(1.1);
 }
 
 /*Форма поиска*/
@@ -179,6 +179,8 @@ ul.menu > li:hover > ul.submenu {
 .subscribe input {
     float: left;
 }
+
+/*главная страница*/
 .home-container {
     /*height: 700px;*/
     /*border: 1px solid lightgrey;*/
