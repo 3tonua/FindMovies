@@ -300,6 +300,13 @@ ul.menu > li:hover > ul.submenu {
     animation-iteration-count: 1;
 }
 
+/*Buttons*/
+.btn-group {
+    margin: 10px auto;
+}
+
+
+
 /*Стили из бутстрапа*/
 /*
 

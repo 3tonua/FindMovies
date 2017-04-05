@@ -11,5 +11,8 @@ app.config(function ($routeProvider) {
     }).when('/movie/:id', {
         controller: 'GetSingleUsers',
         templateUrl: 'templates/singleUser.html'
+    }).when('/tv/:id', {
+        controller: 'GetSingleUsers',
+        templateUrl: 'templates/singleUser.html'
     })
 });
