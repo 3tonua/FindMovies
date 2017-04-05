@@ -51,6 +51,9 @@ body {
     filter: blur(2px);
     transition: all 1s
 }*/
+.badge-error{
+    background-color: #b94a48;
+}
 .menu {
     position: relative;
     width: 100%;
