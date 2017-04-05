@@ -143,21 +143,12 @@ ul.menu > li:hover > ul.submenu {
 
 .footer {
     width: 100%;
-    height: 210px;
-    background-color: #b9b9b9;
+    margin: 0;
     position: relative;
-    /*margin-top: -150px;*/
-    clear: both;
-    background-image: url("./../images/down.jpg");
-    background-position: center, top;
-    z-index: 99;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 1s
-}
-.footer:hover {
-    filter: blur(2px);
-    transition: all 1s
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+    transition: all 0.5s ease;
+    height: 37px;
+    background: rgba(0,0,0,0.65);
 }
 .container {
     display: inline-block;
