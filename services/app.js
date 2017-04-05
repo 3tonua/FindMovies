@@ -1,1 +1,1 @@
-var app = angular.module('FindMovies', ['ngRoute']);
+var app = angular.module('FindMovies', ['ngRoute', 'ui.bootstrap']);
