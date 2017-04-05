@@ -180,9 +180,9 @@ ul.menu > li:hover > ul.submenu {
 .subscribe {
     background: rgba(0,0,0,0.65);
     display: table;
-    padding: 20px;
-    margin: 50px auto 0 auto;
-    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    /*border-radius: 5px;*/
 }
 .subscribe input[type="text"], .subscribe input[type="email"], textarea {
     border: 0;
@@ -191,19 +191,19 @@ ul.menu > li:hover > ul.submenu {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     padding: 10px 20px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     box-sizing: border-box; 				/* убираем внутренние отступы для текстовых полей */
 }
 .subscribe input[type="submit"] {
     background: #ae2c52;
     border: 0;
     color: #fff;
-    font-size: 1.25;
+    /*font-size: 1.25;*/
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     padding: 10px 35px 10px 35px;
     cursor:pointer;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 .subscribe input {
     float: left;
