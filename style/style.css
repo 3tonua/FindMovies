@@ -6,6 +6,10 @@ body {
     text-align: center;
     background: #f8f8f8;
 }
+.divCenter {
+    width: 80%;
+    margin: 0 auto
+}
 .header {
     /*background-color: #262626;*/
     height: 200px;
@@ -144,7 +148,7 @@ ul.menu > li:hover > ul.submenu {
     box-shadow: 3px 3px 8px rgba(0,0,0,0.5);
     /*border: red solid 1px;*/
     transition: all 0.1s;
-    transform: scale(1.1);
+    /*transform: scale(1.1);*/
 }
 
 /*Форма поиска*/
