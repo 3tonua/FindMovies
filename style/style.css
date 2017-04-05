@@ -142,9 +142,11 @@ ul.menu > li:hover > ul.submenu {
 }
 
 .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
     margin: 0;
-    position: relative;
     /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
     transition: all 0.5s ease;
     height: 37px;
