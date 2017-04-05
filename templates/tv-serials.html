@@ -16,10 +16,17 @@
         <most-popular-tv ng-repeat="serial in serials"></most-popular-tv>
     </div>
 
-    <div class="btn-group">
-        <button type="button" class="btn btn-default">Left</button>
-        <button type="button" class="btn btn-default">Right</button>
-    </div>
+    <nav aria-label="...">
+        <ul class="pager">
+            <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+            <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+    </nav>
+
+    <!--<div class="btn-group">-->
+        <!--<button type="button" class="btn btn-default">Left</button>-->
+        <!--<button type="button" class="btn btn-default">Right</button>-->
+    <!--</div>-->
 
     <!--<ul class="pagination">-->
         <!--<li><a href="#">&laquo;</a></li>-->
