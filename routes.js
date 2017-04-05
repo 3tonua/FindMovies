@@ -9,10 +9,10 @@ app.config(function ($routeProvider) {
         controller: 'tvSerialsController',
         templateUrl: 'templates/tv-serials.html'
     }).when('/movie/:id', {
-        controller: 'GetSingleUsers',
-        templateUrl: 'templates/singleUser.html'
+        controller: '',
+        templateUrl: 'templates/movie.html'
     }).when('/tv/:id', {
-        controller: 'GetSingleUsers',
-        templateUrl: 'templates/singleUser.html'
+        controller: '',
+        templateUrl: 'templates/tv.html'
     })
 });
