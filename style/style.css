@@ -8,36 +8,61 @@ body {
 }
 .divCenter {
     width: 80%;
-    margin: 0 auto
+    margin: 0 auto;
 }
 .header {
-    /*background-color: #262626;*/
-    height: 200px;
-    line-height: 20px;
+    margin: 0;
     position: relative;
     width: 100%;
-    margin-bottom: 10px;
-    /*margin: 0 auto*/
+    z-index: 5000;
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+    transition: all 0.5s ease;
+    /*height: 50px;*/
+    background: rgba(0,0,0,0.65);
+
+    /*background-color: #262626;*/
+    /*height: 200px;*/
+    /*line-height: 20px;*/
+    /*position: relative;*/
+    /*width: 100%;*/
+    /*margin-bottom: 10px;*/
+    /*!*margin: 0 auto*!*/
 }
-.blur {
-    background-image: url("./../images/up.jpg");
-    background-position: center, top;
-    height: 210px;
-    width: 100%;
-    z-index: 99;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    transition: all 1s
+.header.scrollNav {
+    margin: 0;
+    background: white;
+    opacity: 0.92;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid rgba(200, 200, 200, 0.8);
 }
+/*.blur {*/
+    /*background-image: url("./../images/up.jpg");*/
+    /*background-position: center, top;*/
+    /*height: 210px;*/
+    /*width: 100%;*/
+    /*z-index: 99;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*position: absolute;*/
+    /*transition: all 1s*/
+/*}*/
 /*.blur:hover {
     filter: blur(2px);
     transition: all 1s
 }*/
 .menu {
-    position: absolute;
-    z-index: 100;
+    position: relative;
+    width: 100%;
+    z-index: 5000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+    height: 40px;
     margin: 0 auto;
+
+    /*position: absolute;*/
+    /*z-index: 100;*/
+    /*margin: 0 auto;*/
+    /*}*/
 }
 ul {
     text-align: center;
@@ -156,7 +181,7 @@ ul.menu > li:hover > ul.submenu {
     background: rgba(0,0,0,0.65);
     display: table;
     padding: 20px;
-    margin: 30px auto 0 auto;
+    margin: 50px auto 0 auto;
     border-radius: 5px;
 }
 .subscribe input[type="text"], .subscribe input[type="email"], textarea {
