@@ -34,6 +34,38 @@ app.service ('API', function ($http, $q, apiKeys) {
             });
             return d.promise
         },
+        getMovie: function (idMovie) {
+            var d = $q.defer();
+            $http({
+                method: 'GET',
+                url: 'https://api.themoviedb.org/3/movie/' + idMovie,
+                params: {
+                    api_key: apiKeys.tmdb,
+                    language: "en-UA"
+                }
+            }).then(function (data) {
+                console.log(data.data);
+                var openMovie = data.data;
+                d.resolve(openMovie)
+            });
+            return d.promise
+        },
+        getTv: function (idTv) {
+            var d = $q.defer();
+            $http({
+                method: 'GET',
+                url: 'https://api.themoviedb.org/3/tv/' + idTv,
+                params: {
+                    api_key: apiKeys.tmdb,
+                    language: "en-UA"
+                }
+            }).then(function (data) {
+                console.log(data.data);
+                var openTv = data.data;
+                d.resolve(openTv)
+            });
+            return d.promise
+        },
         getYoutubeTrailers: function (titleName) {
             console.log(titleName);
             var d = $q.defer();
@@ -44,7 +76,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                     part: "snippet",
                     key: apiKeys.youtube,
                     maxResults: 1,
-                    q: 'Official trailer' + titleName,
+                    q: titleName,
                     regionCode: "UA"
                 }
             }).then(function (data) {
