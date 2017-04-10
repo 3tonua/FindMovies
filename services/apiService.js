@@ -1,7 +1,6 @@
 app.service ('API', function ($http, $q, apiKeys) {
     return {
         getMostPopularMovies: function () {
-            // var key = 'aa1625f9990899f7cfc5676de6cf520d';
             var d = $q.defer();
             $http({
                 method: 'GET',
@@ -30,6 +29,27 @@ app.service ('API', function ($http, $q, apiKeys) {
                 console.log(data);
                 var serials = data.data;
                 d.resolve(serials)
+            });
+            return d.promise
+        },
+        getYoutubeTrailers: function (params) {
+            var key = 'AIzaSyD0KxGbBLA3r2EtQD6t0eUYIEztv2zKRHs';
+            var d = $q.defer();
+            $http({
+                method: 'GET',
+                url: 'https://www.googleapis.com/youtube/v3/search',
+                params: {
+                    part: "snippet",
+                    key: apiKeys.youtube,
+                    maxResults: 5,
+                    q: params.query,
+                    regionCode: params.regions
+                }
+            }).then(function (data) {
+                var y_videos = data.data.items;
+                console.log(y_videos[0]);
+
+                d.resolve(y_videos)
             });
             return d.promise
         }
