@@ -25,7 +25,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                 params: {
                     api_key: apiKeys.tmdb,
                     page: 1,
-                    language: "ru-UA"
+                    language: "en-UA"
                 }
             }).then(function (data) {
                 console.log(data);
@@ -80,9 +80,8 @@ app.service ('API', function ($http, $q, apiKeys) {
                     regionCode: "UA"
                 }
             }).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 var idFromYoutube = data.data.items[0].id.videoId;
-                console.log(idFromYoutube);
                 d.resolve(idFromYoutube)
             });
             return d.promise
