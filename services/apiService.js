@@ -7,7 +7,8 @@ app.service ('API', function ($http, $q, apiKeys) {
                 url: 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22',
                 params: {
                     api_key: apiKeys.tmdb,
-                    page: 1
+                    page: 1,
+                    language: "ru-UA"
                 }
             }).then(function (data) {
                 console.log(data);
@@ -23,7 +24,8 @@ app.service ('API', function ($http, $q, apiKeys) {
                 url: 'https://api.themoviedb.org/3/discover/tv',
                 params: {
                     api_key: apiKeys.tmdb,
-                    page: 1
+                    page: 1,
+                    language: "ru-UA"
                 }
             }).then(function (data) {
                 console.log(data);
@@ -32,8 +34,8 @@ app.service ('API', function ($http, $q, apiKeys) {
             });
             return d.promise
         },
-        getYoutubeTrailers: function (params) {
-            var key = 'AIzaSyD0KxGbBLA3r2EtQD6t0eUYIEztv2zKRHs';
+        getYoutubeTrailers: function (titleName) {
+            console.log(titleName);
             var d = $q.defer();
             $http({
                 method: 'GET',
@@ -41,15 +43,15 @@ app.service ('API', function ($http, $q, apiKeys) {
                 params: {
                     part: "snippet",
                     key: apiKeys.youtube,
-                    maxResults: 5,
-                    q: params.query,
-                    regionCode: params.regions
+                    maxResults: 1,
+                    q: 'Official trailer' + titleName,
+                    regionCode: "UA"
                 }
             }).then(function (data) {
-                var y_videos = data.data.items;
-                console.log(y_videos[0]);
-
-                d.resolve(y_videos)
+                console.log(data);
+                var idFromYoutube = data.data.items[0].id.videoId;
+                console.log(idFromYoutube);
+                d.resolve(idFromYoutube)
             });
             return d.promise
         }

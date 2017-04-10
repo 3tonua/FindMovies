@@ -9,10 +9,10 @@ app.config(function ($routeProvider) {
         controller: 'tvSerialsController',
         templateUrl: 'templates/tv-serials.html'
     }).when('/movie/:id', {
-        controller: '',
+        controller: 'movieController',
         templateUrl: 'templates/movie.html'
     }).when('/tv/:id', {
-        controller: '',
+        controller: 'tvController',
         templateUrl: 'templates/tv.html'
     })
 });
