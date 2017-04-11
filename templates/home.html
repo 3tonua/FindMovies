@@ -5,12 +5,18 @@
 
     <div>
         <div class="subscribe">
-            <form action="" method="post">
-                <input type="text">
-                <input type="submit" value="Search">
+            <form>
+                <input type="text" ng-model="searchInput" required>
+                <button type="submit" ng-click="search()" >Search</button>
             </form>
         </div>
     </div>
+
+    <div>
+        <span ng-hide="searched == 0" style="display: block;"><h3>Результаты поиска:</h3></span>
+        <most-popular-movies ng-repeat="movie in searched"></most-popular-movies>
+    </div>
+
 
     <div class="home-container">
             <a ng-href="#!/popular">

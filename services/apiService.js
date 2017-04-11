@@ -65,6 +65,24 @@ app.service ('API', function ($http, $q, apiKeys) {
             });
             return d.promise
         },
+        getMovieSearch: function (search) {
+            console.log(search);
+            var d = $q.defer();
+            $http({
+                method: 'GET',
+                url: 'https://api.themoviedb.org/3/search/movie',
+                params: {
+                    query: search,
+                    api_key: apiKeys.tmdb,
+                    language: "ru-UA"
+                }
+            }).then(function (data) {
+                console.log(data.data);
+                var searchedMovie = data.data;
+                d.resolve(searchedMovie);
+            });
+            return d.promise
+        },
         getYoutubeTrailers: function (titleName) {
             console.log(titleName);
             var d = $q.defer();
