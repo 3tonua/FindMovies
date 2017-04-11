@@ -13,5 +13,25 @@ app.controller('movieController', function ($scope, $routeParams, API, $sce) {
         //Дата выхода
         $scope.date = moment(openMovie.release_date).format('DD.MM.YYYY');
         $scope.year = moment(openMovie.release_date).format('YYYY');
+
+        $scope.toWatchlist = function () {
+
+            console.log(openMovie.original_title);
+
+            var obj = [{
+                item: [openMovie.id]
+            }];
+            console.log(obj);
+
+            var serialObj = JSON.stringify(obj); //сериализуем его
+
+            localStorage.setItem("myKey", serialObj); //запишем его в хранилище по ключу "myKey"
+
+        };
+
+        // console.log(localStorage[openMovie.original_title]);
+
     });
+
+
 });

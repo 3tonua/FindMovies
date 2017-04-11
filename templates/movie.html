@@ -7,26 +7,27 @@
             <img ng-src="{{'https://image.tmdb.org/t/p/w640' + openMovie.poster_path}}" alt="..." style="width: 300px; margin-top: 10px;">
         </div>
 
-        <div style="display: inline-block; text-align: left; margin: 20px 0; width: 60%;">
+        <div style="display: inline-block; text-align: left; margin: 20px 0; width: 60%; height: 100%;">
             <h2>{{openMovie.title}} ({{year}})</h2>
-            <button >В избранное</button>
-            <h4>Rating: {{openMovie.vote_average}}</h4>
+            <h4>Рейтинг: {{openMovie.vote_average}}</h4>
+            <button ng-click="toWatchlist()">В избранное</button>
             <p>{{openMovie.overview}}</p>
         </div>
     </section>
-    <span style="text-align: left">
+    <div style="text-align: left; margin: 10px 34px; border: 1px black">
         <p>Оригинальное название: {{openMovie.original_title}}</p>
-        <p>Слоган: {{openMovie.tagline}}</p>
-        <p>Бюджет: {{openMovie.budget}}$</p>
-        <p>Жанр: <span ng-repeat="genre in openMovie.genres" style="border: 1px solid lightgrey; margin: 0 2px"> {{genre.name}} </span></p>
-        <p>Страна: <span ng-repeat="country in openMovie.production_countries" style="border: 1px solid lightgrey; margin: 0 2px"> {{country.name}} </span></p>
+        <p ng-hide="!openMovie.tagline">Слоган: {{openMovie.tagline}}</p>
+        <p>Бюджет: {{openMovie.budget | number}}$</p>
+        <p>Жанр: <span ng-repeat="genre in openMovie.genres" style="border: 1px solid lightgrey; margin: 0 2px; padding: 2px; border-radius: 4px"> {{genre.name}} </span></p>
+        <p>Страна: <span ng-repeat="country in openMovie.production_countries" style="border: 1px solid lightgrey; margin: 0 2px; padding: 2px; border-radius: 4px"> {{country.name}} </span></p>
         <p>Дата выхода: {{date}}</p>
-        <p ng-hide="!openMovie.homepage"><a style="text-decoration: none" ng-href="{{openMovie.homepage}}" target="_blank">IMDB</a></p>
+        <p ng-hide="!openMovie.homepage"><a style="text-decoration: none" ng-href="{{openMovie.homepage}}" target="_blank">{{openMovie.original_title}}</a></p>
 
-    </span>
+    </div>
 </div>
 
-<div style="display: inline; margin: 30px; width: 640px; height: 360px">
+<div style="display: block; margin: 30px auto 50px auto; height: 360px">
+    <h3>Trailer</h3>
     <iframe width="640" height="360" ng-src="{{urlYoutube}}" frameborder="0" allowfullscreen></iframe>
 </div>
 

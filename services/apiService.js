@@ -8,7 +8,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                 params: {
                     api_key: apiKeys.tmdb,
                     page: 1,
-                    language: "en-UA"
+                    language: "ru-UA"
                 }
             }).then(function (data) {
                 console.log(data);
@@ -25,7 +25,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                 params: {
                     api_key: apiKeys.tmdb,
                     page: 1,
-                    language: "en-UA"
+                    language: "ru-UA"
                 }
             }).then(function (data) {
                 console.log(data);

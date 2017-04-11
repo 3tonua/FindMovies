@@ -7,7 +7,7 @@ app.controller('tvController', function ($scope, $routeParams, API, $sce) {
         $scope.titleName = openTv.original_name + ' Trailer';
         console.log($scope.titleName);
         API.getYoutubeTrailers($scope.titleName).then(function (idFromYoutube) {
-            $scope.idFromYoutube = idFromYoutube;
+            // $scope.idFromYoutube = idFromYoutube;
             $scope.urlYoutube = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + idFromYoutube);
         });
 

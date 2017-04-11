@@ -1,23 +1,33 @@
 <header></header>
 
 <div class="divCenter">
-    <section style="height: 600px; margin: 15px; background: #ffffff; box-shadow: 3px 3px 8px rgba(0,0,0,0.5); padding: 0;">
+    <section style="height: 500px; margin: 15px">
 
         <div style="display: inline-block; float: left; margin: 20px">
             <img ng-src="{{'https://image.tmdb.org/t/p/w640' + openTv.poster_path}}" alt="..." style="width: 300px; margin-top: 10px;">
         </div>
 
-        <div style="display: inline-block; text-align: left; margin: 20px 0; width: 60%;">
+        <div style="display: inline-block; text-align: left; margin: 20px 0; width: 60%; height: 100%;">
             <h2>{{openTv.name}} ({{year}})</h2>
-            <h4>Rating: {{openTv.vote_average}}</h4>
+            <h4>Рейтинг: {{openTv.vote_average}}</h4>
+            <button ng-click="toWatchlist()">В избранное</button>
             <p>{{openTv.overview}}</p>
         </div>
-
     </section>
-
-    <div style="display: inline; margin: 30px; width: 640px; height: 360px">
-        <iframe width="640" height="360" ng-src="{{urlYoutube}}" frameborder="0" allowfullscreen></iframe>
+    <div style="text-align: left; margin: 10px 34px; border: 1px black">
+        <p>Оригинальное название: {{openTv.original_title}}</p>
+        <p ng-hide="!openTv.tagline">Слоган: {{openMovie.tagline}}</p>
+        <p>Бюджет: {{openTv.budget | number}}$</p>
+        <p>Жанр: <span ng-repeat="genre in openTv.genres" style="border: 1px solid lightgrey; margin: 0 2px; padding: 2px; border-radius: 4px"> {{genre.name}} </span></p>
+        <p>Страна: <span ng-repeat="country in openTv.production_countries" style="border: 1px solid lightgrey; margin: 0 2px; padding: 2px; border-radius: 4px"> {{country.name}} </span></p>
+        <p>Дата выхода: {{date}}</p>
+        <p ng-hide="!openTv.homepage"><a style="text-decoration: none" ng-href="{{openTv.homepage}}" target="_blank">{{openTv.original_title}}</a></p>
     </div>
+</div>
+
+<div style="display: block; margin: 30px auto 50px auto; height: 360px">
+    <h3>Trailer</h3>
+    <iframe width="640" height="360" ng-src="{{urlYoutube}}" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <footer></footer>
