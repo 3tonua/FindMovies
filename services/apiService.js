@@ -8,7 +8,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                 params: {
                     api_key: apiKeys.tmdb,
                     page: 1,
-                    language: "ru-UA"
+                    language: "en-UA"
                 }
             }).then(function (data) {
                 console.log(data);
@@ -41,10 +41,9 @@ app.service ('API', function ($http, $q, apiKeys) {
                 url: 'https://api.themoviedb.org/3/movie/' + idMovie,
                 params: {
                     api_key: apiKeys.tmdb,
-                    language: "en-UA"
+                    language: "ru-UA"
                 }
             }).then(function (data) {
-                console.log(data.data);
                 var openMovie = data.data;
                 d.resolve(openMovie)
             });
@@ -57,7 +56,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                 url: 'https://api.themoviedb.org/3/tv/' + idTv,
                 params: {
                     api_key: apiKeys.tmdb,
-                    language: "en-UA"
+                    language: "ru-UA"
                 }
             }).then(function (data) {
                 console.log(data.data);

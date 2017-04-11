@@ -1,3 +1,23 @@
 <header></header>
 
-<iframe width="640" height="360" ng-src="{{urlYoutube}}" frameborder="0" allowfullscreen></iframe>
+<div class="divCenter">
+    <section style="height: 600px; margin: 15px; background: #ffffff; box-shadow: 3px 3px 8px rgba(0,0,0,0.5); padding: 0;">
+
+        <div style="display: inline-block; float: left; margin: 20px">
+            <img ng-src="{{'https://image.tmdb.org/t/p/w640' + openMovie.poster_path}}" alt="..." style="width: 300px; margin-top: 10px;">
+        </div>
+
+        <div style="display: inline-block; text-align: left; margin: 20px 0; width: 60%;">
+            <h2>{{openMovie.title}} ({{year}})</h2>
+            <h4>Rating: {{openMovie.vote_average}}</h4>
+            <p>{{openMovie.overview}}</p>
+        </div>
+
+    </section>
+
+    <div style="display: inline; margin: 30px; width: 640px; height: 360px">
+        <iframe width="640" height="360" ng-src="{{urlYoutube}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+<footer></footer>
