@@ -14,5 +14,8 @@ app.config(function ($routeProvider) {
     }).when('/tv/:id', {
         controller: 'tvController',
         templateUrl: 'templates/tv.html'
+    }).when('/about', {
+        controller: '',
+        templateUrl: 'templates/about.html'
     })
 });
