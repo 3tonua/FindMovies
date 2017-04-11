@@ -59,7 +59,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                     language: "ru-UA"
                 }
             }).then(function (data) {
-                console.log(data.data);
+                // console.log(data.data);
                 var openTv = data.data;
                 d.resolve(openTv)
             });
