@@ -2,6 +2,8 @@ app.controller('movieController', function ($scope, $routeParams, API, $sce) {
     API.getMovie($routeParams.id).then(function (openMovie) {
         $scope.openMovie = openMovie;
         console.log(openMovie);
+
+        //Название для youtube запроса
         $scope.titleName = openMovie.original_title + ' Trailer';
         API.getYoutubeTrailers($scope.titleName).then(function (idFromYoutube) {
             $scope.idFromYoutube = idFromYoutube;
