@@ -84,7 +84,7 @@ app.service ('API', function ($http, $q, apiKeys) {
             return d.promise
         },
         getYoutubeTrailers: function (titleName) {
-            console.log(titleName);
+            // console.log(titleName);
             var d = $q.defer();
             $http({
                 method: 'GET',

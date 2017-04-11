@@ -17,5 +17,8 @@ app.config(function ($routeProvider) {
     }).when('/about', {
         controller: '',
         templateUrl: 'templates/about.html'
+    }).when('/watchlist', {
+        controller: 'watchlistController',
+        templateUrl: 'templates/watchlist.html'
     })
 });
