@@ -21,10 +21,10 @@ app.config(function ($routeProvider) {
         controller: 'watchlistController',
         templateUrl: 'templates/watchlist.html'
     }).when('/popular-movies', {
-        controller: '',
+        controller: 'popularMoviesController',
         templateUrl: 'templates/popular-movies.html'
     }).when('/now-movies', {
-        controller: '',
+        controller: 'nowMoviesController',
         templateUrl: 'templates/now-movies.html'
     }).when('/popular-tv', {
         controller: '',
