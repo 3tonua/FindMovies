@@ -20,5 +20,17 @@ app.config(function ($routeProvider) {
     }).when('/watchlist', {
         controller: 'watchlistController',
         templateUrl: 'templates/watchlist.html'
+    }).when('/popular-movies', {
+        controller: '',
+        templateUrl: 'templates/popular-tv.html'
+    }).when('/now-movies', {
+        controller: '',
+        templateUrl: 'templates/now-movies.html'
+    }).when('/popular-tv', {
+        controller: '',
+        templateUrl: 'templates/popular-tv.html'
+    }).when('/on-tv', {
+        controller: '',
+        templateUrl: 'templates/on-tv.html'
     })
 });
