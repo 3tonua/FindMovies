@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="FindMovies">
 <head>
+
     <meta charset="UTF-8">
     <title>FindMovies</title>
-    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">-->
     <link rel="shortcut icon" href="./images/logo1.ico" type="image/x-icon">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
-
-
 
 </head>
 
 <body>
 
-<div>
-    <div ng-view></div>
-</div>
+    <div>
+        <div ng-view></div>
+    </div>
 
-<script src="./js/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
-<script src="http://momentjs.com/downloads/moment.js"></script>
+    <script src="./js/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular-route.js"></script>
+    <script src="http://momentjs.com/downloads/moment.js"></script>
 
-<script src="services/app.js"></script>
-<script src="services/apiService.js"></script>
+    <script src="services/app.js"></script>
+    <script src="services/apiService.js"></script>
 
-<script src="directive/header.js"></script>
-<script src="directive/footer.js"></script>
-<script src="directive/most-popular-movies.js"></script>
-<script src="directive/most-popular-tv.js"></script>
+    <script src="directive/header.js"></script>
+    <script src="directive/footer.js"></script>
+    <script src="directive/most-popular-movies.js"></script>
+    <script src="directive/most-popular-tv.js"></script>
 
-<script src="controllers/allMoviesController.js"></script>
-<script src="controllers/allTvsController.js"></script>
-<script src="controllers/homeController.js"></script>
-<script src="controllers/tvController.js"></script>
-<script src="controllers/movieController.js"></script>
-<script src="controllers/watchlistController.js"></script>
-<script src="controllers/popularMoviesController.js"></script>
-<script src="controllers/popularTvController.js"></script>
-<script src="controllers/onTvController.js"></script>
-<script src="controllers/nowMoviesController.js"></script>
+    <script src="controllers/allMoviesController.js"></script>
+    <script src="controllers/allTvsController.js"></script>
+    <script src="controllers/homeController.js"></script>
+    <script src="controllers/tvController.js"></script>
+    <script src="controllers/movieController.js"></script>
+    <script src="controllers/watchlistController.js"></script>
+    <script src="controllers/popularMoviesController.js"></script>
+    <script src="controllers/popularTvController.js"></script>
+    <script src="controllers/onTvController.js"></script>
+    <script src="controllers/nowMoviesController.js"></script>
 
-<script src="routes.js"></script>
-<script src="constant/keys.js"></script>
-
-<!--<nav class="{{active}}" ng-click="$event.preventDefault()">-->
-
-    <!--&lt;!&ndash; When a link in the menu is clicked, we set the active variable &ndash;&gt;-->
-
-    <!--<a href="#" class="home" ng-click="active='home'">Главная</a>-->
-    <!--<a href="#" class="projects" ng-click="active='projects'">Фильмы</a>-->
-    <!--<a href="#" class="services" ng-click="active='services'">Сериалы</a>-->
-    <!--<a href="#" class="contact" ng-click="active='contact'">Актеры</a>-->
-    <!--<a href="#" class="watchlist" ng-click="active='watchlist'">Избранное</a>-->
-<!--</nav>-->
-
-<!--&lt;!&ndash; ng-show will show an element if the value in the quotes is truthful,-->
-     <!--while ng-hide does the opposite. Because the active variable is not set-->
-     <!--initially, this will cause the first paragraph to be visible. &ndash;&gt;-->
-
-<!--<p ng-hide="active">Please click a menu item</p>-->
-<!--<p ng-show="active">You chose <b>{{active}}</b></p>-->
+    <script src="routes.js"></script>
+    <script src="constant/keys.js"></script>
 
 </body>
+
 </html>
