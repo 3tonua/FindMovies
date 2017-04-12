@@ -25,7 +25,7 @@ app.controller('allMoviesController', function ($scope, API) {
             $scope.movies = movies.results
         });
     };
+    // console.log($scope.counter);
 
-    console.log($scope.counter);
-
+    $scope.watchlistCount = localStorage.length;
 });

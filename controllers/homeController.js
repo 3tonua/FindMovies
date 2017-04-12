@@ -12,4 +12,6 @@ app.controller('homeController', function ($scope, API) {
         })
     };
     $scope.searched = [];
+
+    $scope.watchlistCount = localStorage.length;
 });

@@ -5,4 +5,6 @@ app.controller('allTvsController', function ($scope, API) {
         $scope.serials = serials.results;
         $scope.pages = serials
     });
+
+    $scope.watchlistCount = localStorage.length;
 });

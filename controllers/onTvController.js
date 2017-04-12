@@ -30,4 +30,6 @@ app.controller('onTvController', function ($scope, API) {
             $scope.serials = serials.results
         });
     };
+
+    $scope.watchlistCount = localStorage.length;
 });

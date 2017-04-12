@@ -12,5 +12,8 @@ app.controller('tvController', function ($scope, $routeParams, API, $sce) {
 
         //Дата выхода
         $scope.date = moment(openTv.release_date).format('DD.MM.YYYY');
-        $scope.year = moment(openTv.release_date).format('YYYY');    });
+        $scope.year = moment(openTv.release_date).format('YYYY');
+
+        $scope.watchlistCount = localStorage.length;
+    });
 });

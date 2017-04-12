@@ -30,4 +30,6 @@ app.controller('nowMoviesController', function ($scope, API) {
             $scope.movies = movies.results
         });
     };
+
+    $scope.watchlistCount = localStorage.length;
 });
