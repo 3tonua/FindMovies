@@ -18,6 +18,7 @@ app.controller('movieController', function ($scope, $routeParams, API, $sce) {
 
             //Добавление в watchlist
             localStorage.setItem(openMovie.original_title, openMovie.id);
+
             //watchlist счетчик
             $scope.watchlistCount = localStorage.length;
         };
@@ -26,6 +27,5 @@ app.controller('movieController', function ($scope, $routeParams, API, $sce) {
         console.log(localStorage);
 
     });
-
 
 });

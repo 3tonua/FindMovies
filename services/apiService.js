@@ -1,13 +1,14 @@
 app.service ('API', function ($http, $q, apiKeys) {
     return {
-        getMostPopularMovies: function () {
+        getMostPopularMovies: function (url, counter) {
+            console.log(url, counter);
             var d = $q.defer();
             $http({
                 method: 'GET',
-                url: 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22',
+                url: url,
                 params: {
                     api_key: apiKeys.tmdb,
-                    page: 1,
+                    page: counter,
                     language: "ru-UA"
                 }
             }).then(function (data) {

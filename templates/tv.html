@@ -15,8 +15,8 @@
         </div>
     </section>
     <div style="text-align: left; margin: 10px 34px; border: 1px black">
-        <p>Оригинальное название: {{openTv.original_title}}</p>
-        <p ng-hide="!openTv.tagline">Слоган: {{openMovie.tagline}}</p>
+        <p><b>Оригинальное название:</b> {{openTv.original_title}}</p>
+        <p ng-hide="!openTv.tagline"><b>Слоган:</b> {{openMovie.tagline}}</p>
         <p>Бюджет: {{openTv.budget | number}}$</p>
         <p>Жанр: <span ng-repeat="genre in openTv.genres" style="border: 1px solid lightgrey; margin: 0 2px; padding: 2px; border-radius: 4px"> {{genre.name}} </span></p>
         <p>Страна: <span ng-repeat="country in openTv.production_countries" style="border: 1px solid lightgrey; margin: 0 2px; padding: 2px; border-radius: 4px"> {{country.name}} </span></p>
