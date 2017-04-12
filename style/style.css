@@ -19,7 +19,7 @@ body {
     /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
     transition: all 0.5s ease;
     /*height: 50px;*/
-    background: rgba(0,0,0,0.65);
+    background: #333;
 
     /*background-color: #262626;*/
     /*height: 200px;*/
@@ -144,17 +144,17 @@ ul.menu > li:hover > ul.submenu {
     margin-left: 20px;
 }
 
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
-    transition: all 0.5s ease;
-    height: 100px;
-    background: rgba(0,0,0,0.65);
+/*footer*/
+footer {
+    width:100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 1);
 }
+.indent-top2 {padding-top:15px;}
+
+.prev-indent-bot2 {margin-bottom:5px;}
+
+
 .container {
     display: inline-block;
     width: 200px;
@@ -175,7 +175,7 @@ ul.menu > li:hover > ul.submenu {
 
 /*Форма поиска*/
 .subscribe {
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.8);
     display: table;
     padding: 5px;
     margin: 10px auto;
