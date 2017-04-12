@@ -22,7 +22,7 @@ app.config(function ($routeProvider) {
         templateUrl: 'templates/watchlist.html'
     }).when('/popular-movies', {
         controller: '',
-        templateUrl: 'templates/popular-tv.html'
+        templateUrl: 'templates/popular-movies.html'
     }).when('/now-movies', {
         controller: '',
         templateUrl: 'templates/now-movies.html'
