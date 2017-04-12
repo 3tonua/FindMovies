@@ -16,20 +16,14 @@ app.controller('movieController', function ($scope, $routeParams, API, $sce) {
 
         $scope.toWatchlist = function () {
 
-            console.log(openMovie.original_title);
-
-            var obj = [{
-                item: [openMovie.id]
-            }];
-            console.log(obj);
-
-            var serialObj = JSON.stringify(obj); //сериализуем его
-
-            localStorage.setItem("myKey", serialObj); //запишем его в хранилище по ключу "myKey"
-
+            //Добавление в watchlist
+            localStorage.setItem(openMovie.original_title, openMovie.id);
+            //watchlist счетчик
+            $scope.watchlistCount = localStorage.length;
         };
 
-        // console.log(localStorage[openMovie.original_title]);
+        $scope.watchlistCount = localStorage.length;
+        console.log(localStorage);
 
     });
 
