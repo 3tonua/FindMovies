@@ -1,7 +1,6 @@
 app.service ('API', function ($http, $q, apiKeys) {
     return {
         getMovies: function (url, counter) {
-            console.log(url, counter);
             var d = $q.defer();
             $http({
                 method: 'GET',
@@ -12,7 +11,7 @@ app.service ('API', function ($http, $q, apiKeys) {
                     language: "ru-UA"
                 }
             }).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 var movies = data.data;
                 d.resolve(movies)
             });
@@ -22,14 +21,14 @@ app.service ('API', function ($http, $q, apiKeys) {
             var d = $q.defer();
             $http({
                 method: 'GET',
-                url: 'https://api.themoviedb.org/3/discover/tv',
+                url: url,
                 params: {
                     api_key: apiKeys.tmdb,
-                    page: 1,
+                    page: counter,
                     language: "ru-UA"
                 }
             }).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 var serials = data.data;
                 d.resolve(serials)
             });

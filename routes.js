@@ -27,10 +27,10 @@ app.config(function ($routeProvider) {
         controller: 'nowMoviesController',
         templateUrl: 'templates/now-movies.html'
     }).when('/popular-tv', {
-        controller: '',
+        controller: 'popularTvController',
         templateUrl: 'templates/popular-tv.html'
     }).when('/on-tv', {
-        controller: '',
+        controller: 'onTvController',
         templateUrl: 'templates/on-tv.html'
     })
 });
