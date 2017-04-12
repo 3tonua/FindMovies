@@ -1,4 +1,5 @@
 app.controller('homeController', function ($scope, API) {
+    //Поиск по фильмам
     $scope.search = function () {
         $scope.$watch('searchInput', function (searchInput) {
             $scope.searchInput = searchInput

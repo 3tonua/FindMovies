@@ -1,6 +1,6 @@
 app.service ('API', function ($http, $q, apiKeys) {
     return {
-        getMostPopularMovies: function (url, counter) {
+        getMovies: function (url, counter) {
             console.log(url, counter);
             var d = $q.defer();
             $http({
@@ -18,7 +18,7 @@ app.service ('API', function ($http, $q, apiKeys) {
             });
             return d.promise
         },
-        getSerials: function () {
+        getTvs: function (url, counter) {
             var d = $q.defer();
             $http({
                 method: 'GET',

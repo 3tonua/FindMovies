@@ -2,12 +2,12 @@ app.config(function ($routeProvider) {
     $routeProvider.when('/', {
         controller: 'homeController',
         templateUrl: 'templates/home.html'
-    }).when('/popular', {
+    }).when('/all-movies', {
         controller: 'allMoviesController',
-        templateUrl: 'templates/popular-movies.html'
-    }).when('/popular-tv', {
-        controller: 'tvSerialsController',
-        templateUrl: 'templates/tv-serials.html'
+        templateUrl: 'templates/all-movies.html'
+    }).when('/all-tv', {
+        controller: 'allTvsController',
+        templateUrl: 'templates/all-tv.html'
     }).when('/movie/:id', {
         controller: 'movieController',
         templateUrl: 'templates/movie.html'
